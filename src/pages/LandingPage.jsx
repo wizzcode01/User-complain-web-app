@@ -41,7 +41,7 @@ const LandingPage = () => {
                 />
             </Layout> 
              <AfterCardLayout>
-                 <AfterHero afterContent="  Our platform makes it effortless for our customers to log in, file a complaint, and track its progress in real time.
+                 <AfterHero afterContent="Our platform makes it effortless for our customers to log in, file a complaint, and track its progress in real time.
                 Administrators receive instant notifications, respond quickly, and send timely updates so you’re never left in the dark.
                 Whether it’s a service issue, technical problem, or urgent matter, we ensure your voice is heard and your concerns are addressed swiftly and transparently."/>
                 <Cards cards={cardData}/>
