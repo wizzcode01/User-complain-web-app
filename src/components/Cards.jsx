@@ -84,7 +84,7 @@ const Cards = ({cards}) => {
                             <div className="text-6xl text-blue-600 m-6 ">{card.icon}</div>
                         </div>
                          <h1 className="text-[18px] font-semibold m-5">{card.title}</h1>
-                        <p className="text-gray-700">{card.content}</p>
+                         <p className="text-gray-700">{card.content}</p>
                       
                     </motion.div>
                     )  

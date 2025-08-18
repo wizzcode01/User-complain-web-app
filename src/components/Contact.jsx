@@ -1,36 +1,108 @@
-import { FaPhone, FaMail, FaMapPin } from "react-icons/fa"
+import { useState } from "react"
 
+const Contact = ({contactInfo, subtitle=""}) => {
 
-const Contact = ({subtitle}) => {
+      const field = [
+        {
+            label: "First Name & Last Name" , type: "text", name: "name", placeholder: "i.e Seth James", required: true
+        },
+        {
+            label: "Email ", type: "email", name: "email", placeholder: "i.e joesam@gmail.com", required: true
+        },
+        {
+            label: "Phone Number", type: "tel", name: "phone" , placeholder: "i.e +234 790 123 4568", required: true
+        },
+        {
+            label: "Subject", type: "text", name: "subject" , placeholder: "i.e i need help your security is bad", required: true
+        },
+         {
+            label: "Message", element: "textarea", name: "message" , placeholder: "i.e i need help your security is bad", required: true
+        }
+    ]
+    
+   // handle state to store form data 
+   const [formData, setFormData] = useState({})
+     
+  // handle form field changes
+  const handleChange = (e) => {
+    const {name, value} = e.target
+    setFormData({...formData, [name]: value})
+  } 
+
+  // handle form submit
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log("form submitted:", formData)
+  }
+
     return (
-        <div>
+        <div className=" bg-white shadow-lg w-[80%] m-auto h-auto block justify-center items-center p-10 rounded-[2rem] ">
             <div className="flex flex-col justify-center items-center">
-               <h1>Contact Us</h1>
+               <h1 className="font-bold text-orange-600 lg:text-4xl text-3xl">Contact Us</h1>
                <p>{subtitle}</p>
             </div>
             
-            <div className="grid grid-cols-3">
-              <div className="flex flex-row justify-center items-center gap-2">
-                <h3>Call us</h3>
-                <p>
-                    <FaPhone/>
-                </p>
-                <h3>Email us</h3>
-                <p>
-                    <FaMail/>
-                </p>
-                <h3>Visit us</h3>
-                <p>
-                    <FaMapPin/>
-                    34 madian Street, Uyo Akwa Ibom.
-                </p>
-              </div>  
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                {contactInfo.map((contact, index) => (
+                <div 
+                    key={index}
+                    className="flex flex-col justify-center items-center">
+                    <div className="flex flex-col justify-center m-10 p-10">
+                        <div className="flex items-center gap-2">
+                            <span className="text-blue-600 text-2xl">{contact.icon}</span>
+                            <h3 className="font-semibold text-[18px] text-gray-900">{contact.heading}</h3>
+                        </div>
+                        {/* media lists */}
+                        {contact.media && (
+                            <ul className="pl-5 mt-2">
+                                {contact.media.map((address, id) => (
+                                <li
+                                 key={id}
+                                 className="font-normal text-gray-800">
+                                     {address} </li>
+                                ))}
+                            </ul>  
+                        )}
+                    </div>
+               </div> 
+                ))
+            }  
             </div>
-            <div>
-                
+            {/* form input section */}
+            <div className="flex justify-center items-center shadow-lg rounded-[2rem] bg-gray-200 p-5 m-5">
+               <form onSubmit={handleSubmit}>
+                <div className="grid grid-cols-2 gap-4">
+                 {
+                    field.map((field, index) => ( 
+                      <div key={index} style={{ marginBottom: "1rem" }}>
+                         <label>{field.label}</label>
+                         {
+                            field.element === "textarea" ? (
+                                <textarea 
+                                  name={field.name} 
+                                  placeholder={field.placeholder}
+                                   required={field.required} 
+                                   onChange={handleChange}
+                                  
+                                />
+                            ) : (
+                              <input
+                                 type={field.type}
+                                  name={field.name} 
+                                  placeholder={field.placeholder}
+                                   required={field.required}
+                                  onChange={handleChange}
+                               />   
+                            )
+                         }
+                        </div>   
+                    ))
+                 }
+                 <button></button>
+                 </div>
+               </form>
             </div>
         </div>
     )
 }
-
 export default Contact

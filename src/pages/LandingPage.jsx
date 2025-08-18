@@ -5,6 +5,9 @@ import AfterHero from "../components/AfterHero"
 import Cards from "../components/Cards"
 import { FaClipboardCheck, FaChartLine, FaShieldAlt } from "react-icons/fa";
 import AfterCardLayout from "../layout/AfterCardLayout"
+import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import Contact from "../components/Contact"
+
 
 
 const LandingPage = () => {
@@ -25,7 +28,30 @@ const LandingPage = () => {
             icon: <FaShieldAlt />
         }
     ]
+    
+    const contact = [
 
+    
+        {
+            icon: <FaPhone/>,
+            heading: "Call us",
+            media: ["+234 916 021 6837", "+234 706 449 0031"],
+        },
+
+        {
+            icon: <FaEnvelope/>,
+            heading: "Email us",
+            media: ["dicksonwisdom005@gmail.com", "grogg234@gmail.com"]
+        },
+
+        {
+            icon: <FaMapMarkerAlt />,
+            heading: "Visit us",
+            media: ["34 Madian Street, Uyo Akwa Ibom."]
+
+        }
+       
+    ] 
 
     return (
         <>
@@ -45,8 +71,9 @@ const LandingPage = () => {
                 Administrators receive instant notifications, respond quickly, and send timely updates so you’re never left in the dark.
                 Whether it’s a service issue, technical problem, or urgent matter, we ensure your voice is heard and your concerns are addressed swiftly and transparently."/>
                 <Cards cards={cardData}/>
+                <Contact contactInfo={contact} /> 
              </AfterCardLayout>
-                
+            
         </>  
     )
 }
