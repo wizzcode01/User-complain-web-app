@@ -71,11 +71,15 @@ const Contact = ({contactInfo, subtitle=""}) => {
             {/* form input section */}
             <div className="flex justify-center items-center shadow-lg rounded-[2rem] bg-gray-200 p-5 m-5">
                <form onSubmit={handleSubmit}>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid lg:grid-cols-2 gap-4 grid-cols-1">
                  {
                     field.map((field, index) => ( 
-                      <div key={index} style={{ marginBottom: "1rem" }}>
-                         <label>{field.label}</label>
+                      <div 
+                        key={index} 
+                        style={{ marginBottom: "1rem" }}
+                        className="flex flex-col gap-2"
+                        >
+                         <label className="">{field.label}</label>
                          {
                             field.element === "textarea" ? (
                                 <textarea 
@@ -83,6 +87,10 @@ const Contact = ({contactInfo, subtitle=""}) => {
                                   placeholder={field.placeholder}
                                    required={field.required} 
                                    onChange={handleChange}
+                                   rows={5}
+                                   cols={50}
+                                   className="border-2 border-orange-600 rounded-[1rem] p-2 px-4 
+                                              focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500"
                                   
                                 />
                             ) : (
@@ -92,13 +100,20 @@ const Contact = ({contactInfo, subtitle=""}) => {
                                   placeholder={field.placeholder}
                                    required={field.required}
                                   onChange={handleChange}
+                                  className="border-2 border-orange-600 rounded-[2rem] p-2 px-4
+                                             focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500"
                                />   
                             )
                          }
                         </div>   
                     ))
                  }
-                 <button></button>
+                 <button
+                   type="submit"
+                   className="m-auto bg-blue-600 text-white p-3 px-10 rounded-[1rem] font-semibold lg:text-[18px] text-sm hover:bg-blue-500 "
+                >
+                    Submit
+                 </button>
                  </div>
                </form>
             </div>
