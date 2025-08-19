@@ -9,7 +9,7 @@ const AfterCardLayout = ({children}) => {
               style={{backgroundImage: `url(${AfterCardBackground})`}}>
             </div> */}
 
-            <div className="py-16 space-y-12 bg-gray-200">
+            <div className="py-16 space-y-12 bg-white">
                 {children}
             </div>
         </>    

@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom"
-import heroImg from "../assets/heroImage/hero2.jpg"
+import heroImg from "../assets/heroImage/hero3.png"
 import AnimatedText from "./AnimatedText"
 import { motion } from "framer-motion"
 
 const Hero = ({title, description, button}) => {
     return ( 
-      <section className=" m-10 p-10 grid grid-cols-1 md:grid-cols-2 gap-6 lg:h-[70vh] h-auto"> 
+      <section className=" m-0 lg:p-10 grid grid-cols-1 md:grid-cols-2 gap-0 lg:h-[100vh] h-auto w-full bg-gradient-to-b md:bg-gradient-to-r from-blue-900 via-blue-900 to-white"> 
         {/* left section - blue background */}
-        <div className=" flex flex-col gap-10 md:w-full w-full lg:w-[100%] p-8 ml-10">
-           <h1 className="lg:text-[4rem] lg:text-left text-white font-semibold text-center leading-snug">
+        <div className=" flex flex-col justify-center gap-8 w-full lg:w-[100%] md:p-10 p-8">
+           <h1 className="lg:text-[4rem] lg:text-left text-white font-semibold text-center leading-snug text-2xl">
              <AnimatedText text={title}/>
             </h1>  
-           <p className="w-full text-gray-100 font-normal text-lg lg:w-[70%]">{description}</p>  
+           <p className="w-full text-white lg:font-normal font-semibold text-lg lg:w-[70%]">{description}</p>  
            <div className="flex gap-8 flex-wrap">
             {button.map((btn) =>{
                const base =   "px-6 py-3 rounded-lg font-medium transition-all duration-300";

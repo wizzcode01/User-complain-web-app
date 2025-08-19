@@ -43,9 +43,9 @@ const Cards = ({cards}) => {
     return (
         <div>
              {/* Animated Heading */}
-          <div className="flex flex-row justify-between items-center p-10">
+          <div className="flex lg:flex-row flex-col lg:justify-between justify-center items-center p-10 w-full">
             <motion.h1
-                className="lg:text-3xl text-3xl mt-20 font-bold ml-16 text-blue-900"
+                className="lg:text-4xl text-2xl mt-20 font-bold lg:ml-16 text-blue-900 md:text-left"
                 variants={headingVariant}
                 initial="hidden"
                 whileInView="visible"
@@ -54,17 +54,17 @@ const Cards = ({cards}) => {
                 Why Report A Complain? 
                
             </motion.h1>
-            <div className="flex flex-col items-start mt-20">
+            <div className="flex flex-col lg:items-start w-auto items-center lg:mt-20 mt-8">
                 <motion.p
-                    className="flex items-center gap-2 w-10 md:w-auto font-normal text-lg text-blue-600">
-                    <FaPhone className="text-white text-3xl rounded-[50%] bg-blue-600 hover:bg-blue-500 w-10 h-auto p-3 z-10 " />
+                    className="flex items-center gap-2 lg:w-auto w-full md:w-auto font-normal text-lg text-blue-600 text-center">
+                    <FaPhone className="text-white text-4xl rounded-[50%] bg-blue-600 hover:bg-blue-500 w-1/2 lg:w-12 h-auto p-3 z-10 " />
                     Lodging A Complaint Is The first Step Towards Justice
                 </motion.p>
-                <a href="" className="ml-8 text-blue-600 hover:text-blue-500 font-semibold"> Lodge A Complaint </a>
+                <a href="" className="lg:ml-8 ml-24 text-blue-600 hover:text-blue-500 font-semibold"> Lodge A Complaint </a>
             </div>  
         </div>  
               {/* cards grid */}
-            <div className="grid lg:grid-cols-3 grid-cols-1 gap-1 p-20 *:first-letter:text-2xl *:first-letter:font-bold w-full">
+            <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-1 gap-10 lg:p-20 *:first-letter:text-2xl *:first-letter:font-bold w-full justify-items-center">
                 { cards.map((card, index) => {
                     let animationVariant;
                     if (index === 0) animationVariant = slideLeft;

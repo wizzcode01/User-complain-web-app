@@ -36,7 +36,7 @@ const Contact = ({contactInfo, subtitle=""}) => {
   }
 
     return (
-        <div className=" bg-white shadow-lg w-[80%] m-auto h-auto block justify-center items-center p-10 rounded-[2rem] ">
+        <div className=" bg-white shadow-lg lg:w-[80%] w-full m-auto h-auto block justify-center items-center p-10 rounded-[2rem] ">
             <div className="flex flex-col justify-center items-center">
                <h1 className="font-bold text-orange-600 lg:text-4xl text-3xl">Contact Us</h1>
                <p>{subtitle}</p>
@@ -47,7 +47,7 @@ const Contact = ({contactInfo, subtitle=""}) => {
                 <div 
                     key={index}
                     className="flex flex-col justify-center items-center">
-                    <div className="flex flex-col justify-center m-10 p-10">
+                    <div className="flex flex-col justify-center lg:m-10 m-7 lg:p-10">
                         <div className="flex items-center gap-2">
                             <span className="text-blue-600 text-2xl">{contact.icon}</span>
                             <h3 className="font-semibold text-[18px] text-gray-900">{contact.heading}</h3>
@@ -69,7 +69,7 @@ const Contact = ({contactInfo, subtitle=""}) => {
             }  
             </div>
             {/* form input section */}
-            <div className="flex justify-center items-center shadow-lg rounded-[2rem] bg-gray-200 p-5 m-5">
+            <div className="flex justify-center items-center shadow-lg rounded bg-gray-200 p-5 lg:m-5 w-full m-auto">
                <form onSubmit={handleSubmit}>
                 <div className="grid lg:grid-cols-2 gap-4 grid-cols-1">
                  {

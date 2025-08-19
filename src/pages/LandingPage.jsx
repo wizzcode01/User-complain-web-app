@@ -7,6 +7,7 @@ import { FaClipboardCheck, FaChartLine, FaShieldAlt } from "react-icons/fa";
 import AfterCardLayout from "../layout/AfterCardLayout"
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import Contact from "../components/Contact"
+import Footer from "../components/Footer"
 
 
 
@@ -73,7 +74,7 @@ const LandingPage = () => {
                 <Cards cards={cardData}/>
                 <Contact contactInfo={contact} /> 
              </AfterCardLayout>
-            
+            <Footer/>
         </>  
     )
 }

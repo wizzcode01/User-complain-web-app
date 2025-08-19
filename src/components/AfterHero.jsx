@@ -56,16 +56,15 @@ const AfterHero = ({ afterContent }) => {
 
     return (
         <>
-
            <motion.div
-             className="h-full bg-cover flex flex-col justify-center items-center text-white text-center px-4"
+             className="min-h-[40vh] w-full bg-cover flex flex-col justify-center items-center text-white text-center px-4"
              variants={container}
              initial="hidden"
              whileInView= "visible" 
              transition={{ duration: 2, ease: "easeOut"}}
               viewport={{ once: false, amount: 0.3 }} 
            >
-                <div className="w-1/2 mx-auto text-gray-600 font-sans text-2xl font-semibold p-10 mt-10">
+                <div className="lg:w-1/2 w-[90%] mx-auto text-gray-800 font-sans lg:text-2xl text-[18px] font-semibold p-6 md:p-10 mt-10">
                   {lines.map((line, index) => (
                      <motion.p key={index} variants={lineVariant}>
                        {line}
