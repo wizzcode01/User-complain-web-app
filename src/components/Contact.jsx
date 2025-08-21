@@ -36,9 +36,9 @@ const Contact = ({contactInfo, subtitle=""}) => {
   }
 
     return (
-        <div className=" bg-white shadow-lg lg:w-[80%] w-full m-auto h-auto block justify-center items-center p-10 rounded-[2rem] ">
+        <div className=" bg-white shadow-lg border-2 border-t-4 border-b-blue-900 lg:w-[80%] w-[90%] m-auto h-auto block justify-center items-center p-10 rounded-[2rem] ">
             <div className="flex flex-col justify-center items-center">
-               <h1 className="font-bold text-orange-600 lg:text-4xl text-3xl">Contact Us</h1>
+               <h1 className="font-bold text-blue-600 lg:text-4xl text-3xl">Contact Us</h1>
                <p>{subtitle}</p>
             </div>
             
@@ -89,8 +89,8 @@ const Contact = ({contactInfo, subtitle=""}) => {
                                    onChange={handleChange}
                                    rows={5}
                                    cols={50}
-                                   className="border-2 border-orange-600 rounded-[1rem] p-2 px-4 
-                                              focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500"
+                                   className="border-2 border-blue-600 rounded-[1rem] p-2 px-4 
+                                              focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
                                   
                                 />
                             ) : (
@@ -100,8 +100,8 @@ const Contact = ({contactInfo, subtitle=""}) => {
                                   placeholder={field.placeholder}
                                    required={field.required}
                                   onChange={handleChange}
-                                  className="border-2 border-orange-600 rounded-[2rem] p-2 px-4
-                                             focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500"
+                                  className="border-2 border-blue-600 rounded-[2rem] p-2 px-4
+                                             focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
                                />   
                             )
                          }

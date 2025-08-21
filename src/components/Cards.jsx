@@ -54,13 +54,13 @@ const Cards = ({cards}) => {
                 Why Report A Complain? 
                
             </motion.h1>
-            <div className="flex flex-col lg:items-start w-auto items-center lg:mt-20 mt-8">
+            <div className="flex flex-col lg:items-start w-auto items-center justify-center lg:mt-20 mt-8">
                 <motion.p
-                    className="flex items-center gap-2 lg:w-auto w-full md:w-auto font-normal text-lg text-blue-600 text-center">
+                    className="flex items-center  gap-2 lg:w-auto w-full md:w-auto font-normal text-lg text-blue-600 text-center">
                     <FaPhone className="text-white text-4xl rounded-[50%] bg-blue-600 hover:bg-blue-500 w-1/2 lg:w-12 h-auto p-3 z-10 " />
                     Lodging A Complaint Is The first Step Towards Justice
                 </motion.p>
-                <a href="" className="lg:ml-8 ml-24 text-blue-600 hover:text-blue-500 font-semibold"> Lodge A Complaint </a>
+                <a href="" className="lg:ml-12 ml-24 text-blue-600 hover:text-blue-500 font-semibold"> Lodge A Complaint </a>
             </div>  
         </div>  
               {/* cards grid */}
@@ -73,7 +73,7 @@ const Cards = ({cards}) => {
                     return (
                     <motion.div
                         key={index} 
-                        className="bg-white shadow-lg rounded-[1rem] p-16 flex flex-col justify-center items-center w-[90%] h-auto gap-1 text-center"
+                        className="bg-white shadow-lg border-4 border-b-0 hover:border-b-2 border-b-blue-900 rounded-[1rem] p-16 flex flex-col justify-center items-center w-[90%] h-auto gap-1 text-center"
                         variants={animationVariant}
                         initial="hidden" 
                         whileInView="visible"
@@ -83,7 +83,7 @@ const Cards = ({cards}) => {
                         <div className="border-2 border-blue-600 rounded-[4rem]">
                             <div className="text-6xl text-blue-600 m-6 ">{card.icon}</div>
                         </div>
-                         <h1 className="text-[18px] font-semibold m-5">{card.title}</h1>
+                         <h1 className="text-[18px] lg:text-2xl font-semibold text-blue-900 m-5">{card.title}</h1>
                          <p className="text-gray-700">{card.content}</p>
                       
                     </motion.div>

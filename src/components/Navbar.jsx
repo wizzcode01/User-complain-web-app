@@ -25,15 +25,16 @@ function Navbar(){
                     <Link to="/" className="hover:text-gray-400 transition-all duration-500 ease-in-out text-[18px]">about</Link>
                     <Link to="/" className="hover:text-gray-400 transition-all duration-500 ease-in-out text-[18px]">report</Link>
                     <Link to="/" className="hover:text-gray-400 transition-all duration-500 ease-in-out text-[18px]">contact</Link>
-                       <Link to="/login" className=" mr-14 text-sm text-orange-600 px-8 py-2 rounded-[2rem] hover:text-white
-                       hover:bg-orange-600 border-solid border-2 border-orange-600 transition-all duration-500 ease-in-out">Login</Link>
+                    <Link to="/AdminLogin" className=" hover:text-gray-400 transition-all duration-500 ease-in-out text-[18px]">admin</Link>
+                    <Link to="/login" className=" mr-14 text-sm text-blue-600 px-8 py-2 rounded-[2rem] hover:text-white
+                       hover:bg-blue-600 border-solid border-2 border-blue-600 transition-all duration-500 ease-in-out">Login</Link>
                 </div>
 
                 {/* Mobile Menu Button */}
                 <div className="md:hidden flex items-center cursor-pointer"> 
                  <button
                    onClick={toggleMenu}
-                   className="text-orange-600 focus:outline-none"
+                   className="text-blue-600 focus:outline-none"
                    >
                     {isOpen ? <X size={28} /> : <Menu size={28} />}
                  </button>
@@ -45,9 +46,10 @@ function Navbar(){
                     <div className="md:hidden absolute top-20 left-0 w-full bg-white shadow-lg flex flex-col items-center py-4 z-50">
                         <Link to="/" className="mb-4 hover:text-gray-400 transition-all duration-500 ease-in-out text-[18px]">about</Link>
                         <Link to="/" className="mb-4 hover:text-gray-400 transition-all duration-500 ease-in-out text-[18px]">report</Link>
-                        <Link to="/" className="mb-4 hover:text-gray-400 transition-all duration-500 ease-in-out text-[18px]">contact</Link>
-                       <Link to="/login" className=" m-auto text-sm text-orange-600 px-8 py-2 rounded-[2rem] hover:text-white
-                       hover:bg-orange-600 border-solid border-2 border-orange-600 transition-all duration-500 ease-in-out">Login</Link>
+                        <Link to="/" className="mb-4 hover:text-gray-400 transition-all duration-500 ease-in-out text-[18px]">contact</Link> 
+                        <Link to="/AdminLogin" className="mb-4 hover:text-gray-400 transition-all duration-500 ease-in-out text-[18px]">admin</Link>
+                        <Link to="/login" className=" m-auto text-sm text-blue-600 px-8 py-2 rounded-[2rem] hover:text-white
+                       hover:bg-blue-600 border-solid border-2 border-blue-600 transition-all duration-500 ease-in-out">Login</Link>
                     </div>
                 )
             }

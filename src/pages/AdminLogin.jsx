@@ -13,7 +13,7 @@ const AdminLogin = () => {
                 />
             </div>
         <div className="flex flex-col items-center w-[90%] max-w-md bg-white shadow-lg rounded-2xl px-8 py-10 ">
-            <h1 className="text-2xl font-bold text-gray-700 mb-6">ADMIN LOGIN</h1>
+            <h1 className="text-2xl  font-bold text-gray-700 mb-6">ADMIN LOGIN</h1>
             <form className="flex flex-col w-full gap-2">
                 <div className="flex flex-col gap-6">
                    <div className="">

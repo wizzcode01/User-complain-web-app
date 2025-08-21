@@ -63,7 +63,7 @@ const LandingPage = () => {
                 description="We provide a platform for users to report issues and complaints regarding various services."
                 button={[
                     {label: "Login", href: "/login", type: "primary"},
-                    {label: "Report complain", href: "/report", type: "secondary"}
+                    {label: "Report complain", href: "/dashboard", type: "secondary"}
                 ]}
                 />
             </Layout> 

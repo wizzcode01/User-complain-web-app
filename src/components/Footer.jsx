@@ -46,14 +46,15 @@ const Footer = () => {
     ]
     const content = footerContent[0]
     return (
-        <footer className="bg-orange-900 text-white p-10 grid grid-cols-4">
+    <footer className="bg-blue-950 text-white p-10 grid grid-cols-4 lg:h-96 h-auto">
+       
             {/* column 1: heading & para1 */}
-            <div>
-                <h1>{content.headings[0]}</h1>
-                <p>{content.paragraphs[0].para1}</p>
+            <div className="text-lg flex flex-col justify-center ">
+                <h1 className="font-bold">{content.headings[0]}</h1>
+                <p className="font-semibold">{content.paragraphs[0].para1}</p>
             </div>
             {/* column 2: navigation */}
-            <div>
+            <div className="flex flex-col justify-center m-10 font-semibold"> 
                 <h1>{content.headings[1]}</h1>
                 <ul>
                     {content.paragraphs[1].para2.map((item, id) => (
@@ -63,7 +64,7 @@ const Footer = () => {
                 </ul>
             </div>
             {/* column 3: Quick Link  */}
-            <div>
+            <div className="flex flex-col justify-center m-10 font-semibold">
                 <h1>{content.headings[2]}</h1>
                 <ul>
                     {content.paragraphs[2].para3.map((item, id) => (
@@ -73,7 +74,7 @@ const Footer = () => {
                 </ul>
             </div>
             {/* column 4: Services & Contact */}
-            <div>
+            <div className="flex flex-col justify-center m-10 font-semibold">
                 <h1>{content.headings[3]}</h1>
                 <ul>
                     {content.paragraphs[3].para4.map((item, id) => (
@@ -84,13 +85,13 @@ const Footer = () => {
               {/* contact information */}
                <div className="flex flex-wrap col-span-4 flex-row items-center mt-4 gap-20">
                   {content.contact.map((contact, indx) => (
-                        <div key={indx} className="flex items-center gap-2">
+                        <div key={indx} className="flex items-center gap-2  font-bold text-[16px]">
                             {contact.icon && <span>{contact.icon}</span>}
                             {contact.location && <span>{contact.location}</span>}
                             {contact.phone && <span>{contact.phone}</span>}
                             {contact.email && <span>{contact.email}</span>}
                             {contact.icons && (
-                                <ul className="flex gap-2">
+                                <ul className="flex gap-6 text-lg">
                                     {contact.icons.map((icon, id) => (
                                         <li key={id}>{icon}</li>
                                     ))}
@@ -99,6 +100,7 @@ const Footer = () => {
                         </div>
                     ))}
                 </div>
+          
         </footer>
     )
 }
