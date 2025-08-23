@@ -84,7 +84,6 @@ const Registration = () => {
             // console.log(userCredential.user)
         }
        
-      
      }
     return (
     <div className="min-h-screen relative flex flex-col items-center justify-center  bg-[linear-gradient(to_bottom,_#002366_50%,_#CEEDD6_50%)]">

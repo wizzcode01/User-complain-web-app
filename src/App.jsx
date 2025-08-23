@@ -8,7 +8,6 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"
 
 
-
 function App() {
   return (
     <Router>
@@ -17,7 +16,9 @@ function App() {
         <Route path="/login" element={<LoginPage/>}/>
         <Route path="/Registration" element={<RegistrationPage/>}/>
         <Route path="/AdminLogin" element={<AdminLogin/>}/>
-        <Route path="/dashboard" element={<UserDashboard/>}/>
+    
+        {/* dashboard layout wrapper */}
+        <Route path="/*" element={<UserDashboard />} />
       </Routes>
        <ToastContainer/>
     </Router>
