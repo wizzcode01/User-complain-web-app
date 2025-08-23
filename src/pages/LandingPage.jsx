@@ -8,7 +8,7 @@ import AfterCardLayout from "../layout/AfterCardLayout"
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import Contact from "../components/Contact"
 import Footer from "../components/Footer"
-
+import Testimonial from "../components/Testimonial"
 
 
 const LandingPage = () => {
@@ -72,10 +72,13 @@ const LandingPage = () => {
                 Administrators receive instant notifications, respond quickly, and send timely updates so you’re never left in the dark.
                 Whether it’s a service issue, technical problem, or urgent matter, we ensure your voice is heard and your concerns are addressed swiftly and transparently."/>
                 <Cards cards={cardData}/>
+                 <Testimonial/>
                 <Contact contactInfo={contact} /> 
              </AfterCardLayout>
             <Footer/>
+           
         </>  
+
     )
 }
 
