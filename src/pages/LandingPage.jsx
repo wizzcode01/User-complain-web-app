@@ -62,7 +62,7 @@ const LandingPage = () => {
                 title="Report. Resolve. Rest Easy."
                 description="We provide a platform for users to report issues and complaints regarding various services."
                 button={[
-                    {label: "Login", href: "/login", type: "primary"},
+                    {label: "Get Started", href: "/registration", type: "primary"},
                     {label: "Report complain", href: "/dashboard", type: "secondary"}
                 ]}
                 />

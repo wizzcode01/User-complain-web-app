@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import LogoImg from "../assets/heroImage/logo-img.webp"
+import LogoImg from "../assets/navbar/Logo2.webp"
 import React, {useState} from "react";
 import { Menu, X} from "lucide-react";
 
@@ -16,9 +16,9 @@ function Navbar(){
             {/* sites links */}
             <div className="flex justify-between items-center h-full">
                   {/* sites logo */}
-               <div className="lg:m-8 flex gap-2 items-center">
-                 <img src={LogoImg} alt="Logo" className="w-12 h-12 block rounded-[3rem]"/>
-                 <span className="text-gray-600 font-semibold text-2xl">Grogg</span>
+               <div className="lg:m-8 flex gap-0 items-center">
+                 <img src={LogoImg} alt="Logo" className="w-28 h-28 block rounded-[3rem]"/>
+                 <span className="text-gray-700 font-semibold text-2xl">GROGG</span>
                 </div>
                 {/* Desktop links */}
                 <div className="hidden md:flex items-center gap-9 text-gray-600 font-semibold">

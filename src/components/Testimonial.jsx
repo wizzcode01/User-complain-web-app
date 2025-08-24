@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react"
-import testimonial1 from "../assets/testimonial/testimonial1.avif"
-import testimonial2 from "../assets/testimonial/testimonial2.avif"
 import testimonial3 from "../assets/testimonial/testimonial3.avif"
-import testimonial4 from "../assets/testimonial/testimonial4.avif"
 import testimonial5 from "../assets/testimonial/testimonial5.avif"
+import testimonial6 from "../assets/testimonial/testimonial6.avif"
+import testimonial8 from "../assets/testimonial/testimonial8.avif"
+import testimonial9 from "../assets/testimonial/testimonial9.avif"
 import {motion, AnimatePresence } from "framer-motion"
 
     const testimonials = [
@@ -12,7 +12,7 @@ import {motion, AnimatePresence } from "framer-motion"
    name: "John Smith",
    role: "CEO, Agency",
    text: "This service has been a game-changer for my business. It streamlined our operations and allowed us to scale faster than I expected.",
-   image: testimonial1, 
+   image: testimonial8, 
    rating: 5, 
 },
 {
@@ -20,7 +20,7 @@ import {motion, AnimatePresence } from "framer-motion"
    name: "Mary Johnson",
    role: "Marketing Manager",
    text: "The support team is outstanding and the results speak for themselves. I’ve seen noticeable improvements in just a short time.",
-   image: testimonial5,
+   image: testimonial9,
    rating: 4,
 },
 {
@@ -28,7 +28,7 @@ import {motion, AnimatePresence } from "framer-motion"
    name: "Blessing",
    role: "Entrepreneur",
    text: "I was impressed with how simple yet powerful this solution is. It delivered real value and went beyond what I anticipated.",
-   image: testimonial4,
+   image: testimonial6,
    rating: 5,
 },
 {
@@ -64,7 +64,7 @@ import {motion, AnimatePresence } from "framer-motion"
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -40 }}
                         transition={{ duration: 0.5 }}
-                        className="bg-white p-16 rounded-2xl shadow-lg text-center"
+                        className="bg-gray-200 p-16 rounded-2xl shadow-lg text-center"
                     >
                      {/* image */}
                      <div className="w-52 h-52 mx-auto rounded-full overflow-hidden border-4 border-indigo-500">
@@ -80,7 +80,7 @@ import {motion, AnimatePresence } from "framer-motion"
                       </div>
                       {/* stars */}
                       <div className="text-yellow-400">
-                         <p className="text-[10px] text-gray-600">{current.text}</p>
+                         <p className="text-[12px] text-gray-700">{current.text}</p>
                         {"★".repeat(current.rating)}
                         {"☆".repeat(5 - current.rating)}
                       </div>

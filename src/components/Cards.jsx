@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa";
 import report from "../assets/heroImage/afterContent2.png"
+import { Link } from "react-router-dom";
 
 const Cards = ({cards}) => {
     // animation variants for each effect
@@ -94,8 +95,10 @@ const Cards = ({cards}) => {
             </div>
             <div className="flex justify-center p-10">
                    <img src={report} className="w-80" alt="human_demostration" />
-                    <button className=" py-3 px-6 md:px-8 font-semibold text-blue-600 hover:text-white border-2 border-blue-600 hover:bg-blue-600 transition-all ease-in-out rounded-[2rem] text-[20px] flex items-center gap-2">
-                        Report a complain <FaArrowRight/> </button>
+                    <Link
+                     to="/login"
+                    className=" py-3 px-6 md:px-8 font-semibold text-blue-600 hover:text-white border-2 border-blue-600 hover:bg-blue-600 transition-all ease-in-out rounded-[2rem] text-[20px] flex items-center gap-2">
+                        Report a complain <FaArrowRight/> </Link>
             </div>
                
         </div>

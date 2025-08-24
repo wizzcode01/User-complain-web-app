@@ -13,6 +13,7 @@ const Login = () => {
    const [password, setPassword] = useState("")
 
    const handleLogin = async (e) => {
+       e.preventDefault()
           try {
             const userCredential = await signInWithEmailAndPassword(auth, email, password)
             toast.success("Login successful")
@@ -35,7 +36,9 @@ const Login = () => {
             </div>
         <div className="flex flex-col items-center w-[90%] max-w-md bg-white shadow-lg rounded-2xl px-8 py-10 ">
             <h1 className="text-2xl font-bold text-gray-700 mb-6">LOGIN</h1>
-            <form className="flex flex-col w-full gap-2">
+            <form 
+             onSubmit={handleLogin}
+            className="flex flex-col w-full gap-2">
                 <div className="flex flex-col gap-6">
                    <div className="">
                         <label className="font-semibold text-blue-600">EMAIL</label>
@@ -63,7 +66,7 @@ const Login = () => {
             </form>
             <button
                className="bg-blue-900 text-white text-lg px-4 py-2 mt-6 rounded-lg w-32 hover:bg-blue-700"
-               type={handleLogin}
+               type="button"
               >
                 LOGIN
             </button>
