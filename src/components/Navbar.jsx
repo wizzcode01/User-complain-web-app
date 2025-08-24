@@ -12,12 +12,12 @@ function Navbar(){
         isOpen ? setIsOpen(false) : setIsOpen(true)
     }
     return(
-        <nav className=" w-full relative h-20 px-6 mt-3">
+        <nav className=" w-full relative h-20 px-6 lg:mt-3">
             {/* sites links */}
             <div className="flex justify-between items-center h-full">
                   {/* sites logo */}
                <div className="lg:m-8 flex gap-0 items-center">
-                 <img src={LogoImg} alt="Logo" className="w-28 h-28 block rounded-[3rem]"/>
+                 <img src={LogoImg} alt="Logo" className="lg:w-28 w-16 h-16 lg:h-28 block rounded-[3rem]"/>
                  <span className="text-gray-700 font-semibold text-2xl">GROGG</span>
                 </div>
                 {/* Desktop links */}

@@ -55,8 +55,8 @@ import {motion, AnimatePresence } from "framer-motion"
 
         const current = testimonials[index];
     return (
-        <div className=" min-h-[100vh] p-6">
-            <div className="w-full flex justify-around gap-6 items-center p-10">
+        <div className=" min-h-[100vh] lg:p-6">
+            <div className="w-full flex justify-around gap-6 items-center lg:p-10 p-5 lg:flex-row flex-col">
                <AnimatePresence mode="wait">
                    <motion.div
                         key={current.id}
@@ -64,14 +64,14 @@ import {motion, AnimatePresence } from "framer-motion"
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -40 }}
                         transition={{ duration: 0.5 }}
-                        className="bg-gray-200 p-16 rounded-2xl shadow-lg text-center"
+                        className="bg-gray-200 p-16 rounded-2xl shadow-lg text-center order-2 lg:order-1"
                     >
                      {/* image */}
                      <div className="w-52 h-52 mx-auto rounded-full overflow-hidden border-4 border-indigo-500">
                        <img src={current.image} alt={current.name} />    
                     </div>   
                     
-                    <div className="flex flex-col gap-4 justify-center items-center w-1/2">
+                    <div className="flex flex-col gap-4 justify-center items-center lg:w-1/2 w-full">
                       {/* name and role */}
                       <div>
                         <h3 className="font-semibold  text-3xl 
@@ -88,8 +88,8 @@ import {motion, AnimatePresence } from "framer-motion"
                     </div>  
                     </motion.div>
                 </AnimatePresence> 
-                 <div className="flex flex-col w-1/2">
-                    <h1 className="text-4xl text-blue-600 font-bold">Here’s What Our Customers Are Saying About Their Experience With Us</h1>
+                 <div className="flex flex-col lg:w-1/2 w-full order-1 lg:order-2">
+                    <h1 className="lg:text-4xl text-3xl text-blue-600 font-bold">Here’s What Our Customers Are Saying About Their Experience With Us</h1>
                     <p className="text-sm text-gray-700">We value every piece of feedback from our clients. Their experiences inspire us to keep improving and delivering the best possible service.</p>
                  </div>    
             </div>

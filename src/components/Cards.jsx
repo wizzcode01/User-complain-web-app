@@ -93,11 +93,11 @@ const Cards = ({cards}) => {
                 } ) }  
                
             </div>
-            <div className="flex justify-center p-10">
-                   <img src={report} className="w-80" alt="human_demostration" />
+            <div className="flex justify-center lg:p-10 p-12 lg:mt-0 mt-20">
+                   <img src={report} className="lg:w-80 w-48" alt="human_demostration" />
                     <Link
                      to="/login"
-                    className=" py-3 px-6 md:px-8 font-semibold text-blue-600 hover:text-white border-2 border-blue-600 hover:bg-blue-600 transition-all ease-in-out rounded-[2rem] text-[20px] flex items-center gap-2">
+                    className=" py-3 px-6 md:px-8 font-semibold text-blue-600 hover:text-white border-2 border-blue-600 hover:bg-blue-600 transition-all ease-in-out rounded-[2rem] lg:text-[20px] flex items-center gap-2">
                         Report a complain <FaArrowRight/> </Link>
             </div>
                

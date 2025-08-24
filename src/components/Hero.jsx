@@ -4,13 +4,13 @@ import { motion } from "framer-motion"
 
 const Hero = ({title, description, button}) => {
     return ( 
-      <section className=" m-0 lg:p-10 grid grid-cols-1 lg:h-[80vh] h-auto w-full bg-gradient-to-b md:bg-gradient-to-r from-blue-900 via-blue-900 to-white"> 
+      <section className=" m-0 lg:p-10 grid grid-cols-1 h-[80vh] w-full bg-gradient-to-b md:bg-gradient-to-r from-blue-900 via-blue-900 to-white"> 
         {/* left section - blue background */}
         <div className=" flex flex-col justify-center items-center gap-8 w-full lg:w-[100%] md:p-10 p-8">
           
               {/* Heading with fade-in */}
             <motion.h1
-              className="lg:text-[4rem] lg:text-left text-white font-semibold text-center leading-snug text-2xl"
+              className="lg:text-[4rem] lg:text-left text-white font-semibold text-center leading-snug text-[29px]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 3,  delay: 1, ease: "easeInOut" }}
@@ -29,12 +29,12 @@ const Hero = ({title, description, button}) => {
                {description}
             </motion.p>
           
-           <div className="flex gap-8 flex-wrap">
+           <div className="flex gap-4 lg:gap-8 lg:flex-wrap">
             {button.map((btn) =>{
                const base =   "px-6 py-3 rounded-lg font-medium transition-all duration-300";
                const variant = btn.type === "primary" 
-               ? "lg:px-8 lg:py-3 py2-2 md:px-8  font-semibold text-blue-600 bg-white  hover:bg-blue" : 
-               "lg:py-3 lg:px-8 py-2 md:px-8 font-semibold text-blue-600 bg-white hover:bg-blue-200 rounded-[2rem]"
+               ? "lg:px-8 lg:py-3 py-2 px-10  font-semibold text-blue-600 bg-white hover:bg-blue lg:text-lg text-sm" : 
+               "lg:py-3 lg:px-8 py-2 px-10 font-semibold text-blue-600 bg-white hover:bg-blue-200 rounded-[2rem]"
                const classes = `${base} ${variant}`;
                // if the href looks external, use an anchor tag other use Link
                const isExternal = /^https?:\/\//i.test(btn.href)
