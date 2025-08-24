@@ -33,8 +33,8 @@ const Hero = ({title, description, button}) => {
             {button.map((btn) =>{
                const base =   "px-6 py-3 rounded-lg font-medium transition-all duration-300";
                const variant = btn.type === "primary" 
-               ? "lg:px-8 lg:py-3 py-2 px-10  font-semibold text-blue-600 bg-white hover:bg-blue lg:text-lg text-sm" : 
-               "lg:py-3 lg:px-8 py-2 px-10 font-semibold text-blue-600 bg-white hover:bg-blue-200 rounded-[2rem]"
+               ? "lg:px-8 lg:py-3 py-2 px-10  font-semibold text-blue-600 bg-white hover:bg-blue lg:text-lg text-[10px]" : 
+               "lg:py-3 lg:px-8 py-2 px-10 font-semibold text-blue-600 bg-white hover:bg-blue-200 rounded-[2rem] text-[10px]"
                const classes = `${base} ${variant}`;
                // if the href looks external, use an anchor tag other use Link
                const isExternal = /^https?:\/\//i.test(btn.href)
