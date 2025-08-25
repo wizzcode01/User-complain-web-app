@@ -33,7 +33,7 @@ const DashboardSlideBar = () => {
         ]
         return (
                
-            <div className="w-64 h-full bg-gray-200 border-blue-600 text-black flex flex-col p-3 gap-2">
+            <div className="w-64 h-screen bg-gray-200 border-blue-600 text-black flex flex-col p-3 gap-2">
                 <div className="relative"> 
                     {/*Desktop Slide bar */}  
                     <div className="mt-20">

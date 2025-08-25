@@ -34,15 +34,15 @@ const DashboardMain = () => {
                             <FaUser className="border-2 border-blue-600 rounded-[50%] p-2 w-10 h-10 text-blue-600"/>
                             <h1 
                             className="font-semibold text-lg text-gray-500">
-                               Welcome Dashboard
+                               Welcome, Wisdom Dickson
                                </h1>
                         </div>   
-                        <div className="flex gap-2 items-center p-10">
-                            <div className="flex justify-center items-center  px-3 py-2 w-80">
+                        <div className="flex justify-center items-center gap-3 p-5">
+                            <div className="flex justify-center items-center  px-4 py-2 w-80">
                                 <FaSearch className="mr-2 text-blue-700"/>
-                                <input type="text" className="focus:outline-none border-2 border-blue-600 rounded-[3rem] py-1 px-5"/>
+                                <input type="text" placeholder="search activity" className="focus:outline-none border-2 border-blue-600 rounded-[3rem] py-1 px-5"/>
+                                 <FaBell className="text-2xl text-yellow-800"/>
                             </div>    
-                            <FaBell className="text-2xl text-yellow-800"/>
                         </div>   
                     </nav>
                 </div>
