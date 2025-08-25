@@ -47,9 +47,11 @@ const DashboardSlideBar = () => {
                                 className={`flex gap-2 items-center p-2 m-2 transition-all delay-75 ease-in-out rounded-lg group 
                                 ${active === index ? "bg-blue-600 text-white" : "hover:bg-blue-600"}`}
                             >
-                                <item.icon className="text-2xl text-blue-500 group-hover:text-white"/>
+                                <item.icon className={`text-2xl
+                                    ${active === index? "text-white" :"text-blue-500 group-hover:text-white" }`}/>
                                 <span
-                                className="font-semibold text-lg text-[#112A46] group-hover:text-white"
+                                className={`font-semibold text-lg
+                                 ${active === index? "text-white" : "text-[#112A46] group-hover:text-white"}`}
                                 >{item.label}</span>
                             </div> 
                         </Link>

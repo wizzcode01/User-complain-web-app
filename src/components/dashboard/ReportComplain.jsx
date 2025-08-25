@@ -42,9 +42,9 @@ const ReportComplain = () => {
             </div>
         
         <div className="flex w-[85%] items-center justify-center pl-20">
-            <div className="flex gap-4 justify-center">
+            <div className="flex  justify-center">
                 <div className="flex gap-4 flex-col">
-                    <h4 className="font-semibold text-lg text-">Fill in your complain</h4>
+                    <h4 className="font-semibold text-lg text-">Lodge a Complaint</h4>
                     <form action="">
                     <textarea 
                             rows={7}
@@ -55,7 +55,7 @@ const ReportComplain = () => {
                         />
                     </form>
                 </div>
-                <div className="flex justify-center lg:p-10 p-12 mt-7">
+                <div className="flex justify-center lg:p-10  mt-7">
                   <div className="w-full">
                     <img src={report} className="w-60" alt="human_demostration" />
                    </div>
@@ -67,7 +67,7 @@ const ReportComplain = () => {
             </div>
                
         </div>  
-          <div className="w-[85%] items-center justify-between p-6 ml-14 mt-10">
+          <div className="w-1/2 items-center justify-between p-6 ml-14 ">
                <h2 className="text-xl font-semibold mb-4 text-blue-700">Lists of user complains</h2>
                 <div className="divide-y divide-gray-300">
                     {activities.map((act, index) => (
