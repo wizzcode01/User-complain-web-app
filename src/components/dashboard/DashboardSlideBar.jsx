@@ -69,7 +69,7 @@ const DashboardSlideBar = ({active, setNewActive, isOpen}) => {
 
       {/* Mobile Sidebar */}
       {isOpen && (
-        <div className="fixed top-0 left-0 z-50 mt-10 h-full w-full flex flex-col p-3 gap-2 lg:hidden bg-gray-100 border-blue-600 text-black">
+        <div className="lg:hidden fixed top-0 left-0 z-50 mt-10 h-full w-full flex flex-col p-3 gap-2 bg-gray-100 border-blue-600 text-black">
           <div className="mt-16">
           {sidebarItems.map((item, index) => (
             <Link

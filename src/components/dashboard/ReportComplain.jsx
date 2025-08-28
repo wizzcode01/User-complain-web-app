@@ -1,4 +1,4 @@
-import { FaUser, FaSearch, FaBell, FaArrowRight } from "react-icons/fa"
+import { FaUser, FaSearch, FaBell, FaArrowRight, FaTachometerAlt } from "react-icons/fa"
 import report from "../dashboard/dashboardImage/ReportComplain.png"
 import { Link } from "react-router-dom"
 import { useEffect, useState } from "react"
@@ -42,6 +42,7 @@ const ReportComplain = () => {
         console.error(err);
         toast.error("Failed to send complaint");
         }
+
   };
 
      const [activities, setActivities] = useState([
@@ -51,10 +52,22 @@ const ReportComplain = () => {
                    { action: "Inconsistent repies", time: "2 month ago, tue 2025" }
             ])
 
+        const [isOpen, setIsOpen] = useState(false);
+        const [active, setNewActive] = useState(null);
+
     return (
    <div className="w-full min-h-screen bg-gray-50"> 
-   <div className="w-full bg-white shadow-lg h-16 flex items-center">
+     <DashboardSlideBar active={active} setNewActive={setNewActive} isOpen={isOpen} />
+
+    <div className="w-full bg-white shadow-lg h-16 flex items-center">
         <nav className=" flex justify-between w-full lg:p-10 px:4 sm:px-6">
+               <button
+                className="lg:hidden text-blue-600 text-2xl"
+                onClick={() => setIsOpen(!isOpen)}
+                 >
+                    <FaTachometerAlt size={28} />
+               </button>
+            
             <div className="flex gap-2 items-center">
                 <FaUser className="border-2 border-blue-600 rounded-[50%] p-2 w-7 h-7 text-blue-600"/>
                     <h1 

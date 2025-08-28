@@ -1,4 +1,3 @@
-// DashboardMain.jsx
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FaSearch, FaArrowRight, FaUser, FaBell, FaTachometerAlt } from "react-icons/fa";
@@ -19,14 +18,9 @@ const DashboardMain = () => {
   ]);
 
   return (
-    <div className="flex">
-    
-      <DashboardSlideBar active={active} setNewActive={setNewActive} isOpen={isOpen} />
-
+    <div className="flex-1">
       {/* Main Content */}
-      <div className="flex-1">
-        {/* Navbar */}
-        <div className="w-full bg-white shadow-lg h-16 flex items-center px-4 sm:px-6 justify-between">
+        <div className=" w-full bg-white shadow-lg h-16 flex items-center px-4 sm:px-6 justify-between">
           {/* Mobile Toggle Button */}
           <button
             className="lg:hidden text-blue-600 text-2xl"
@@ -73,7 +67,7 @@ const DashboardMain = () => {
             item.heading.map((head, i) => (
               <Link
                 key={i}
-                className="bg-white border-2 shadow-2xl w-full max-w-xs h-36 hover:h-40 transition-all text-center flex justify-center items-center rounded-lg mx-auto"
+                className="bg-white border-2 lg:shadow-2xl shadow-lg w-full max-w-xs h-36 hover:h-40 transition-all text-center flex justify-center items-center rounded-lg mx-auto"
               >
                 <div className="text-center text-blue-900 text-[18px] sm:text-[20px] font-semibold">
                   {head}
@@ -83,6 +77,17 @@ const DashboardMain = () => {
           )}
         </div>
 
+          {/* Footer Section */}
+        <div className="flex flex-col md:flex-row items-center justify-center  p-4 sm:p-6">
+          <Link
+            to="../report-complaint"
+            className="flex items-center gap-2 bg-blue-600 text-white rounded-lg px-4 py-2 h-12"
+          >
+            Have a complaint?
+            <FaArrowRight className="text-xl sm:text-2xl" />
+          </Link>
+          <img src={chatImage} alt="" className="w-40 sm:w-52 md:w-60" />
+        </div>
         {/* User Activity Log */}
         <div className="p-4 sm:p-6">
           <h2 className="text-lg sm:text-xl font-semibold mb-4 text-blue-700">
@@ -101,19 +106,7 @@ const DashboardMain = () => {
           </div>
         </div>
 
-        {/* Footer Section */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 p-4 sm:p-6">
-          <Link
-            to="../report-complaint"
-            className="flex items-center gap-2 bg-blue-600 text-white rounded-lg px-4 py-2 h-12"
-          >
-            Have a complaint?
-            <FaArrowRight className="text-xl sm:text-2xl" />
-          </Link>
-          <img src={chatImage} alt="" className="w-40 sm:w-52 md:w-60" />
-        </div>
       </div>
-    </div>
   );
 };
 
