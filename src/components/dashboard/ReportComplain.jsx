@@ -56,30 +56,29 @@ const ReportComplain = () => {
    <div className="w-full bg-white shadow-lg h-16 flex items-center">
         <nav className=" flex justify-between w-full lg:p-10 px:4 sm:px-6">
             <div className="flex gap-2 items-center">
-                <FaUser className="border-2 border-blue-600 rounded-[50%] p-2 w-10 h-10 text-blue-600"/>
+                <FaUser className="border-2 border-blue-600 rounded-[50%] p-2 w-7 h-7 text-blue-600"/>
                     <h1 
-                        className="font-semibold sm:text-lg text-sm text-gray-500">
+                        className="font-semibold sm:text-lg text-[12px] text-gray-500">
                         Hello Customer
                     </h1>
             </div>   
             <div className="flex items-center gap-3">
                 <div className="flex items-center px-2 sm:px-4 py-1 sm:py-2 w-full sm:w-72">
-                    <FaSearch className="mr-2 text-blue-700"/> 
-                    <input type="text" placeholder="search complain" className="sm:text-base text-sm flex-1 focus:outline-none border-2 border-blue-600 rounded-[3rem] py-1 px-5"/>
-                    <FaBell className="text-xl sm:text-2xl text-yellow-800"/>
+                    <FaSearch className=" text-blue-700"/> 
+                    <input type="text" placeholder="search complain" className="sm:text-base text-[10px] flex-1 focus:outline-none border-2 border-blue-600 rounded-[3rem] py-1 px-1"/>
+                    <FaBell className="text-[sm] sm:text-2xl text-yellow-800"/>
                 </div>    
             </div>   
         </nav>
     </div>
 
-      
      {/* Welcome Banner */}
-      <div className="w-full flex justify-center p-4 sm:p-6">
+      <div className="w-80 lg:w-full flex justify-center p-4 sm:p-6">
         <div className="w-full max-w-4xl bg-gradient-to-r from-blue-900 via-blue-600 to-blue-400 p-6 rounded-2xl">
-          <h1 className="text-white font-bold text-2xl sm:text-4xl">
+          <h1 className="text-white font-bold text-xl sm:text-4xl">
             Dear Customer
           </h1>
-          <span className="font-medium sm:font-semibold text-lg sm:text-2xl text-white">
+          <span className="font-medium sm:font-semibold text-[14px] sm:text-2xl text-white">
             You got any complaint about our services and product?
           </span>
         </div>
@@ -91,7 +90,7 @@ const ReportComplain = () => {
           <h4 className="font-semibold text-lg">Lodge a Complaint</h4>
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col lg:flex-row gap-4"
+            className="lg:w-full w-72 flex flex-col lg:flex-row gap-4"
           >
             <textarea
               rows={6}
