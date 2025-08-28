@@ -73,7 +73,7 @@ const ReportComplain = () => {
     </div>
 
      {/* Welcome Banner */}
-      <div className="w-80 lg:w-full flex justify-center p-4 sm:p-6">
+      <div className="w-80 lg:w-full flex justify-center items-center p-4 sm:p-6">
         <div className="w-full max-w-4xl bg-gradient-to-r from-blue-900 via-blue-600 to-blue-400 p-6 rounded-2xl">
           <h1 className="text-white font-bold text-xl sm:text-4xl">
             Dear Customer
@@ -85,7 +85,7 @@ const ReportComplain = () => {
       </div>
 
       {/* Complaint Form */}
-      <div className="w-full flex justify-center p-4">
+      <div className="w-full flex justify-center items-center p-4">
         <div className="w-full max-w-4xl flex flex-col gap-4">
           <h4 className="font-semibold text-lg">Lodge a Complaint</h4>
           <form
