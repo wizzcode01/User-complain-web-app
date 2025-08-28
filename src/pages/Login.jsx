@@ -8,7 +8,7 @@ import { auth } from "../firebase";
 
 const Login = () => {
    const navigate = useNavigate()
-   
+   const [loading, setLoading] = useState(false)
    const [email, setEmail] = useState("")
    const [password, setPassword] = useState("")
 
@@ -17,9 +17,9 @@ const Login = () => {
           try {
             const userCredential = await signInWithEmailAndPassword(auth, email, password)
             toast.success("Login successful")
-            navigate("/dashboard")
+            navigate("/dashboard/main")
         }catch (error) {
-            toast.error("Invalid details ")
+            toast.error("Invalid details")
             console.log(error.message)
         }
         
@@ -63,13 +63,15 @@ const Login = () => {
                         />
                     </div>    
                 </div>
-            </form>
-            <button
+                <button
                className="bg-blue-900 text-white text-lg px-4 py-2 mt-6 rounded-lg w-32 hover:bg-blue-700"
-               type="button"
+               type="submit"
+                disabled={loading}
               >
-                LOGIN
+                  { loading? "Login..." : "LOGIN" }
             </button>
+            </form>
+          
 
         </div>
         <div className="flex flex-col justify-center items-center gap-3 mt-3 p-5">

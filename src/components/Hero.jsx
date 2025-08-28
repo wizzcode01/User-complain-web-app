@@ -13,7 +13,7 @@ const Hero = ({title, description, button}) => {
               className="lg:text-[4rem] lg:text-left text-white font-semibold text-center leading-snug text-[29px]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 3,  delay: 1, ease: "easeInOut" }}
+              transition={{ duration: 2,  delay: 1, ease: "easeInOut" }}
             >
                 {title}
             </motion.h1>
@@ -24,7 +24,7 @@ const Hero = ({title, description, button}) => {
               className="w-full text-white text-center lg:font-normal font-semibold text-lg lg:w-full"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 3, delay: 1.5, ease: "easeInOut" }}
+              transition={{ duration: 2, delay: 1.5, ease: "easeInOut" }}
             >
                {description}
             </motion.p>

@@ -11,6 +11,7 @@ const UserDashboard = () => {
 
                  {/* Other dashboard pages */}
                 <Route path="/dashboard/report-complaint" element={<ReportComplain/>} />
+                
            </Route>
         </Routes>
     )
