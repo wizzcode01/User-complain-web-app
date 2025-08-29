@@ -57,8 +57,6 @@ const ReportComplain = () => {
 
     return (
    <div className="w-full min-h-screen bg-gray-50"> 
-     <DashboardSlideBar active={active} setNewActive={setNewActive} isOpen={isOpen} />
-
     <div className="w-full bg-white shadow-lg h-16 flex items-center">
         <nav className=" flex justify-between w-full lg:p-10 px:4 sm:px-6">
                <button
