@@ -1,0 +1,7 @@
+how to do fetch api for crud operations using https methhods 
+GET, POST, PUT / PATCH , DELETE 
+
+1. GET METHOD 
+  fetch("https://jsonplaceholder.typicode.com/users)
+     
+

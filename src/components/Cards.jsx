@@ -51,7 +51,7 @@ const Cards = ({cards}) => {
                 variants={headingVariant}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.3 }}
             >
                 Why Report A Complain? 
                
@@ -79,7 +79,7 @@ const Cards = ({cards}) => {
                         variants={animationVariant}
                         initial="hidden" 
                         whileInView="visible"
-                        viewport={{ once: false, amount: 0.2 }}
+                        viewport={{ once: true , amount: 0.2 }}
                     >
       
                         <div className="border-2 border-blue-600 rounded-[4rem]">

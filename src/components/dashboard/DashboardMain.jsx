@@ -17,6 +17,9 @@ const DashboardMain = () => {
     { action: "Check admin", time: "2 hr ago, tue 2025" },
   ]);
 
+  const toggler = () => {
+    setIsOpen((prev) => !prev)
+  }
   return (
     <div className="flex-1">
       {/* Main Content */}
@@ -24,10 +27,12 @@ const DashboardMain = () => {
           {/* Mobile Toggle Button */}
           <button
             className="lg:hidden text-blue-600 text-2xl"
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={toggler}
           >
             <FaTachometerAlt size={28} />
           </button>
+
+          
 
           {/* User Section */}
           <div className="flex gap-2 items-center">
@@ -50,6 +55,13 @@ const DashboardMain = () => {
             <FaBell className="text-xl md:text-2xl text-yellow-800" />
           </div>
         </div>
+
+          {/* slidebar component */}
+          <DashboardSlideBar
+            active={active}
+            setNewActive={setNewActive}
+            isOpen={isOpen}
+          />
 
         {/* Welcome Section */}
         <div className="p-4 sm:p-6">

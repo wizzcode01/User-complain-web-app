@@ -5,6 +5,7 @@ import { useEffect, useState } from "react"
 import { db, auth } from "../../firebase"
 import { collection, addDoc, serverTimestamp, query, where, onSnapshot } from "firebase/firestore"
 import { toast } from "react-toastify"
+import DashboardSlideBar from "./DashboardSlideBar"
 
 const ReportComplain = () => {
     
@@ -55,13 +56,17 @@ const ReportComplain = () => {
         const [isOpen, setIsOpen] = useState(false);
         const [active, setNewActive] = useState(null);
 
+        const toggler = () => {
+          setIsOpen((prev) => !prev)
+        }
+
     return (
    <div className="w-full min-h-screen bg-gray-50"> 
     <div className="w-full bg-white shadow-lg h-16 flex items-center">
         <nav className=" flex justify-between w-full lg:p-10 px:4 sm:px-6">
                <button
                 className="lg:hidden text-blue-600 text-2xl"
-                onClick={() => setIsOpen(!isOpen)}
+                onClick={toggler}
                  >
                     <FaTachometerAlt size={28} />
                </button>
@@ -82,6 +87,13 @@ const ReportComplain = () => {
             </div>   
         </nav>
     </div>
+       {/* slidebar component */}
+          <DashboardSlideBar
+            active={active}
+            setNewActive={setNewActive}
+            isOpen={isOpen}
+          />
+
 
      {/* Welcome Banner */}
       <div className="w-full lg:w-full flex justify-center items-center p-4 sm:p-6">

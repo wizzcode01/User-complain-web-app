@@ -36,7 +36,7 @@ const Contact = ({contactInfo, subtitle=""}) => {
   }
 
     return (
-        <div className=" bg-white shadow-lg border-2 border-t-4 border-b-blue-900 lg:w-[80%] w-[95%] m-auto h-auto block justify-center items-center p-10 rounded-[1rem] ">
+        <div className=" bg-white shadow-lg border-2 border-t-4 border-b-blue-900 lg:w-[80%] w-full m-auto h-auto block justify-center items-center p-10 rounded-[1rem] ">
             <div className="flex flex-col justify-center items-center ">
                <h1 className="font-bold text-blue-600 text-4xl ">Contact Us</h1>
                <p>{subtitle}</p>
@@ -69,7 +69,7 @@ const Contact = ({contactInfo, subtitle=""}) => {
             }  
             </div>
             {/* form input section */}
-            <div className="flex justify-center items-center shadow-lg rounded bg-gray-200 p-5 lg:m-5 w-full m-auto">
+            <div className="flex justify-center bg-blue-100 items-center shadow-lg rounded p-5 lg:m-5 w-full m-auto">
                <form onSubmit={handleSubmit}>
                 <div className="grid lg:grid-cols-2 gap-4 grid-cols-1">
                  {
@@ -89,7 +89,7 @@ const Contact = ({contactInfo, subtitle=""}) => {
                                    onChange={handleChange}
                                    rows={5}
                                    cols={50}
-                                   className="border-2 border-blue-600 lg:rounded-[1rem] p-2 px-4 
+                                   className="border border-blue-600 lg:rounded-[1rem] p-2 px-4 
                                               focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
                                   
                                 />
@@ -100,7 +100,7 @@ const Contact = ({contactInfo, subtitle=""}) => {
                                   placeholder={field.placeholder}
                                    required={field.required}
                                   onChange={handleChange}
-                                  className="border-2 border-blue-600 lg:rounded-[2rem] p-2 px-4
+                                  className="border border-blue-600 lg:rounded-[2rem] p-2 px-4
                                              focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
                                />   
                             )
