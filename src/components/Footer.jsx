@@ -24,7 +24,7 @@ const Footer = () => {
   const content = footerContent[0];
 
   return (
-    <footer className="bg-blue-950 text-white px-6 py-10">
+    <footer className="bg-blue-950 text-white px-6 py-5">
       {/* Top grid (responsive) */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-center md:text-left">
         {/* column 1: heading & para1 */}

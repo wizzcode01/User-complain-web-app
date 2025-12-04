@@ -36,9 +36,9 @@ const Contact = ({contactInfo, subtitle=""}) => {
   }
 
     return (
-        <div className=" bg-white shadow-lg border-2 border-t-4 border-b-blue-900 lg:w-[80%] w-full m-auto h-auto block justify-center items-center p-10 rounded-[1rem] ">
+        <div className=" bg-white shadow-sm border-2  border-b-blue-900 lg:w-[80%] w-full m-auto h-auto block justify-center items-center p-10 rounded-[1rem] ">
             <div className="flex flex-col justify-center items-center ">
-               <h1 className="font-bold text-blue-600 text-4xl ">Contact Us</h1>
+               <h1 className="font-bold text-blue-900 text-4xl ">Contact Us</h1>
                <p>{subtitle}</p>
             </div>
             
@@ -69,7 +69,7 @@ const Contact = ({contactInfo, subtitle=""}) => {
             }  
             </div>
             {/* form input section */}
-            <div className="flex justify-center bg-blue-100 items-center shadow-lg rounded p-5 lg:m-5 w-full m-auto">
+            <div className="flex justify-center bg-blue-900 items-center shadow-lg rounded p-5 lg:m-5 w-full m-auto">
                <form onSubmit={handleSubmit}>
                 <div className="grid lg:grid-cols-2 gap-4 grid-cols-1">
                  {
@@ -79,7 +79,7 @@ const Contact = ({contactInfo, subtitle=""}) => {
                         style={{ marginBottom: "1rem" }}
                         className="flex flex-col gap-2"
                         >
-                         <label className="">{field.label}</label>
+                         <label className="text-white font-semibold">{field.label}</label>
                          {
                             field.element === "textarea" ? (
                                 <textarea 

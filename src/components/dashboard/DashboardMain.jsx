@@ -57,11 +57,11 @@ const DashboardMain = () => {
         </div>
 
           {/* slidebar component */}
-          <DashboardSlideBar
+          {/* <DashboardSlideBar
             active={active}
             setNewActive={setNewActive}
             isOpen={isOpen}
-          />
+          /> */}
 
         {/* Welcome Section */}
         <div className="p-4 sm:p-6">

@@ -51,7 +51,7 @@ const Cards = ({cards}) => {
                 variants={headingVariant}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: false, amount: 0.3 }}
             >
                 Why Report A Complain? 
                
@@ -75,11 +75,11 @@ const Cards = ({cards}) => {
                     return (
                     <motion.div
                         key={index} 
-                        className="bg-white shadow-lg border-4 border-b-0 hover:border-b-2 border-b-blue-900 rounded-[1rem] p-16 flex flex-col justify-center items-center w-[90%] h-auto gap-1 text-center"
+                        className="bg-white border shadow-sm border-b-0 hover:border-b-2 border-b-blue-900 rounded-[1rem] p-16 flex flex-col justify-center items-center w-[90%] h-auto gap-1 text-center"
                         variants={animationVariant}
                         initial="hidden" 
                         whileInView="visible"
-                        viewport={{ once: true , amount: 0.2 }}
+                        viewport={{ once: false , amount: 0.2 }}
                     >
       
                         <div className="border-2 border-blue-600 rounded-[4rem]">

@@ -4,10 +4,10 @@ import { motion } from "framer-motion"
 
 const Hero = ({title, description, button}) => {
     return ( 
-      <section className=" m-0 lg:p-10 grid grid-cols-1 h-[80vh] w-full bg-gradient-to-b md:bg-gradient-to-r from-blue-900 via-blue-900 to-white"> 
+      <section className=" m-0 lg:p-10 grid grid-cols-1 h-[80vh] w-full bg-blue-900"> 
         {/* left section - blue background */}
         <div className=" flex flex-col justify-center items-center gap-8 w-full lg:w-[100%] md:p-10 p-8">
-          
+          <div>
               {/* Heading with fade-in */}
             <motion.h1
               className="lg:text-[4rem] lg:text-left text-white font-semibold text-center leading-snug text-[29px]"
@@ -21,14 +21,14 @@ const Hero = ({title, description, button}) => {
             
             {/* Paragraph with fade-in after heading */}
             <motion.p
-              className="w-full text-white text-center lg:font-normal font-semibold text-lg lg:w-full"
+              className="w-full text-white text-center lg:font-normal font-semibold text-[1.3rem] lg:w-full"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 2, delay: 1.5, ease: "easeInOut" }}
             >
                {description}
             </motion.p>
-          
+          </div>
            <div className="flex gap-4 lg:gap-8 lg:flex-wrap">
             {button.map((btn) =>{
                const base =   "px-6 py-3 rounded-lg font-medium transition-all duration-300";

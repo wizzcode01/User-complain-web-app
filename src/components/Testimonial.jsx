@@ -49,7 +49,7 @@ import {motion, AnimatePresence } from "framer-motion"
         useEffect(() => {
             const internal = setInterval(() => {
             setIndex((prev) => (prev + 1) % testimonials.length);
-            }, 2000);
+            }, 4000);
             return () => clearInterval(internal);
         }, []);
 

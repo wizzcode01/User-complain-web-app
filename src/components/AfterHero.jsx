@@ -18,14 +18,14 @@ const AfterHero = ({ afterContent }) => {
             initial={{y:50, opacity:0}}
             whileInView={{y:0, opacity:1}}
             transition={{duration: 1, ease: "easeOut", delay: 0.2}}
-            viewport={{once: true}}
+            viewport={{once: false}}
             className="lg:w-[50%] w-full" 
             src={img3}/>
             <motion.p 
                 initial={{y:50, opacity: 0}}
                 whileInView={{y:0, opacity:1}}
                 transition={{duration: 1, ease: "easeOut", delay: 0.4}}
-                viewport={{once: true}}
+                viewport={{once: false}}
                 className="w-80 font-normal text-gray-700 text-lg">
                   {afterContent}
             </motion.p>
