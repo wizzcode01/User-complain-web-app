@@ -26,13 +26,13 @@ const DashboardSlideBar = ({active, setNewActive, isOpen}) => {
     { icon: FaTimesCircle, label: "Didn't Send", link: "/dashboard/didnt-send" },
     { icon: FaBell, label: "Notifications", link: "/dashboard/notifications" },
     { icon: FaCog, label: "Settings", link: "/dashboard/settings" },
-    { icon: FaSignOutAlt, label: "Logout", link: "/logout" },
+    { icon: FaSignOutAlt, label: "Logout", link: "/" },
   ];
 
   return (
     <>
       {/* Desktop Sidebar */}
-      <div className="hidden lg:flex w-64 h-screen bg-gray-200 border-blue-600 text-black flex-col p-3 gap-2 ">
+      <div className="hidden lg:flex w-64 min-h-screen bg-gray-200 border-blue-600 text-black flex-col p-3 gap-2 ">
         <div className="mt-20">
           {sidebarItems.map((item, index) => (
             <Link

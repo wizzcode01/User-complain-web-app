@@ -2,13 +2,13 @@
 import { useState } from "react"
 import { FaUser } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
-import { auth, db } from "../firebase";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { doc, setDoc } from "firebase/firestore"
-import { setLogLevel } from "firebase/app";
+// import { auth, db } from "../firebase";
+// import { createUserWithEmailAndPassword } from "firebase/auth";
+// import { doc, setDoc } from "firebase/firestore"
+// import { setLogLevel } from "firebase/app";
 import { toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-setLogLevel('debug')
+// setLogLevel('debug')
 
 
 const Registration = () => {
@@ -60,29 +60,29 @@ const Registration = () => {
             return;
         }
         setLoading(true)
-        try {
-            console.log("Before Firebase call");
-            const userCredential = await createUserWithEmailAndPassword(auth, form.email, form.password)
-            console.log("After Firebase auth", userCredential);
-            await setDoc(doc(db, "users", userCredential.user.uid), {
-               name: form.name,
-               email: form.email,
-               role: "user"
-            })
-            setLoading(false)
-            toast.success("Registration successful!")
+        // try {
+        //     console.log("Before Firebase call");
+        //     const userCredential = await createUserWithEmailAndPassword(auth, form.email, form.password)
+        //     console.log("After Firebase auth", userCredential);
+        //     await setDoc(doc(db, "users", userCredential.user.uid), {
+        //        name: form.name,
+        //        email: form.email,
+        //        role: "user"
+        //     })
+        //     setLoading(false)
+        //     toast.success("Registration successful!")
 
-            setTimeout(() => {
-            navigate("/login")
-        }, 2000)
+        //     setTimeout(() => {
+        //     navigate("/login")
+        // }, 2000)
 
-        }  
-        catch (error) {
-            setLoading(false)
-            setError(error.message)
-            toast.error(error.message)
-            // console.log(userCredential.user)
-        }
+        // }  
+        // catch (error) {
+        //     setLoading(false)
+        //     setError(error.message)
+        //     toast.error(error.message)
+        //     // console.log(userCredential.user)
+        // }
        
      }
     return (
