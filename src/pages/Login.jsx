@@ -23,9 +23,12 @@ const Login = () => {
         email: email,
         password: email,
       });
-      toast.success("Login successful!");
 
-      setTimeout(() => navigate("/dashboard"), 2000);
+      localStorage.setItem("token", res.data.token);
+      localStorage.setItem("user", JSON.stringify(res.data.user));
+
+      toast.success("Login successful!");
+      setTimeout(() => navigate("/dashboard/main"), 1000);
     } catch (error) {
       setError("Login failed");
       toast.error("Login failed");
